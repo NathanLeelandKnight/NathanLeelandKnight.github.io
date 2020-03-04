@@ -21,6 +21,10 @@ html, body {
     text-decoration: none;
 }
 
+.content {
+	padding: 16px;
+}
+
 /* Style the links inside the navigation bar */
 .navbar a {
     float: left;
@@ -41,4 +45,14 @@ html, body {
 .navbar a.active {
     background-color: #1654b8;
     color: white;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width:100%;
+}
+
+.sticky + .content {
+	padding-top: 60px;
 }
