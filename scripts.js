@@ -1,13 +1,17 @@
-window.onscroll = function() {myFunction()};
+var $ = function(id) {
+	return document.getElementById(id);
+}
 
-var navbar = document.getElementById("navbar");
+var stickyNav = function() {
+	var navbar = $("navbar");
 
-var sticky = navbar.offsetTop;
-
-function myFunction() {
-	if (window.pageYOffset >= sticky) {
+	if (window.pageYOffset >= (navbar.scrollTop + $("logo").offsetHeight)) {
 		navbar.classList.add("sticky")
 	} else {
 		navbar.classList.remove("sticky");
 	}
-}
+};
+
+window.onload = function() {
+	window.onscroll = stickyNav;
+};
