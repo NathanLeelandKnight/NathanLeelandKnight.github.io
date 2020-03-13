@@ -1,3 +1,7 @@
+function getfocus(elementID) {
+	document.getElementById(elementID).focus();
+}
+
 var $ = function(id) {
 	return document.getElementById(id);
 }
